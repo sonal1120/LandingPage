@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landing.css"
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span> </h2>
+                <p>A white tote bag is a versatile and timeless accessory, offering a clean and minimalist aesthetic that complements
+                     a wide range of styles and occasions.Its spacious design makes it perfect for 
+                     carrying daily essentials or as a fashionable statement piece.</p>
+                     <a href="#">View All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="white1.png" class="bag">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="white.png" onclick="imgSlider('white1.png');changeBgColor('#FAF9F6')"</li>
+            <li><img src="brown.png" onclick="imgSlider('brown1.png');changeBgColor('#F8F0E3')"</li>
+            <li><img src="black.png" onclick="imgSlider('black1.png');changeBgColor('gray')"</li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.bag').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+    </script>
+</body>
+</html>
